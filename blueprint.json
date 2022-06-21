@@ -1,8 +1,8 @@
 {
 	"identifier": "container-service",
 	"about": {
-		"title": "AWS Container Service",
-		"explanation": "An application blueprint for defining an AWS container service"
+		"title": "Managed Functions Longitude",
+		"explanation": "Define the container service for Managed Functions Longitude"
 	},
 	"compute_service": {
 		"default": {
