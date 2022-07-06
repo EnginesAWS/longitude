@@ -25,7 +25,7 @@
 	},
 	"resources": [
 		{
-			"type": "load_balencer_target_group",
+			"type": "load_balancer_target_group",
 			"configuration": {
 			"identifier" : "longitude-tg"
 			}
