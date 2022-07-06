@@ -22,5 +22,12 @@
 			"desired_count": 3,
 			"essential": true
  		}
-	}
+	},
+	"resources": [
+		{
+			"type": "load_balencer_target_group",
+			"configuration": {
+			"identifier" : "longitude-tg"
+			}
+		}]
 }
