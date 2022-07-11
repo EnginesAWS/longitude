@@ -29,5 +29,12 @@
 			"configuration": {
 			"identifier" : "longitude-tg"
 			}
-		}]
+		},{
+			"type": "subnet",
+			"identifier": "subnet_longitude",
+			"configuration": {
+				"cidr_block": "10.111.30.0/24"
+			}
+		}
+		]
 }
