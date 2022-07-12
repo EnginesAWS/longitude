@@ -27,7 +27,8 @@
 		{
 			"type": "load_balancer_target_group",
 			"configuration": {
-			"identifier" : "longitude-tg"
+			"identifier" : "longitude-tg",
+			"port": 82 
 			}
 		},{
 			"type": "subnet",
