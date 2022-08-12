@@ -25,18 +25,39 @@
 	},
 	"resources": [
 		{
-			"type": "load_balancer_target_group",
-			"identifier" : "longitude-tg",
+			"type": "container_task_definition",
+			"identifier": "longitude"
+		},
+		{
+			"type": "load_balancer",
+			"identifier": "longitude",
 			"configuration": {
-			"vpc_binding" : "vpc",
-			"port": 82 
+				"subnets": [
+					"subnet_a",
+			    		"subnet_b"
+				],
+				"security_groups": [
+					"security_group"
+				]
 			}
-		},{
+		},
+		{
+			"type": "load_balancer_target_group",
+			"identifier": "longitude",
+			"configuration": {
+				"port": 82
+			}
+		},
+		{
+			"type": "load_balancer_listener",
+			"identifier": "longitude"
+		},
+		{
 			"type": "subnet",
-			"identifier": "subnet_longitude",
+			"identifier": "longitude",
 			"configuration": {
 				"cidr_block": "10.111.30.0/24"
 			}
 		}
-		]
+	]
 }
