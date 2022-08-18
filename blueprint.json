@@ -4,54 +4,21 @@
 		"title": "Managed Functions Longitude",
 		"explanation": "Define the container service for Managed Functions Longitude"
 	},
-	"compute_service": {
-		"identifier": "container_service"
-	},
-	"dimensions": {
-		"cpus": 10,
-		"memory": 256
-	},
+	"bindings": [
+		{
+			"type": "embed",
+			"target": {
+				"repository": "https://github.com/EnginesAWS/container-service-infrastructure"
+			}
+		}
+	],
 	"ports": [
 		{
 			"container_port": 82,
 			"host_port": 82
 		}
-	],	
-	"binding_target": {
-		"configuration": {
-			"desired_count": 3,
-			"essential": true
- 		}
-	},
+	],
 	"resources": [
-		{
-			"type": "container_task_definition",
-			"identifier": "longitude"
-		},
-		{
-			"type": "load_balancer",
-			"identifier": "longitude",
-			"configuration": {
-				"subnets": [
-					"subnet_a",
-			    		"subnet_b"
-				],
-				"security_groups": [
-					"security_group"
-				]
-			}
-		},
-		{
-			"type": "load_balancer_target_group",
-			"identifier": "longitude",
-			"configuration": {
-				"port": 82
-			}
-		},
-		{
-			"type": "load_balancer_listener",
-			"identifier": "longitude"
-		},
 		{
 			"type": "subnet",
 			"identifier": "longitude",
