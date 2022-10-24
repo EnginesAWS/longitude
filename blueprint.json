@@ -17,5 +17,14 @@
 			"container_port": 82,
 			"host_port": 82
 		}
+	],
+	"resources": [
+		{
+			"type": "subnet",
+			"identifier": "longitude",
+			"configuration": {
+				"cidr_block": "10.111.30.0/24"
+			}
+		}
 	]
 }
